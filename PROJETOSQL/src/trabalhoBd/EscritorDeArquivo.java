@@ -20,6 +20,8 @@ public class EscritorDeArquivo
 		
 		else 
 		escrita.print("");
+		
+		System.out.println();
 
 		escrita.print(nome);
 		for (int i = nome.length(); i < 100; i++) 

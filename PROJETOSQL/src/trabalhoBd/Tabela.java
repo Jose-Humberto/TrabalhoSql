@@ -15,12 +15,13 @@ import javax.swing.table.DefaultTableModel;
 
 public class Tabela extends JFrame 
 {
-
 	private DefaultTableModel model;
 	private JTable table;
 	
 	public void mostrarTabela() throws Exception 
 	{
+		setTitle("Cadastro de Musicas");
+		
 		String id, nome, album, cantor, duracao, youtube;
 		
 		model = new DefaultTableModel();
@@ -36,7 +37,7 @@ public class Tabela extends JFrame
 		Path caminho = Paths.get("cadastros.txt");
 		byte[] leitor = Files.readAllBytes(caminho);
 		String texto = new String(leitor);
-
+		
 		for (int i = 0; i < texto.length(); i += 307) 
 		{
 			id = texto.substring(i, i + 3).trim();
@@ -49,10 +50,11 @@ public class Tabela extends JFrame
 			String[] tabela = { id, nome, album, cantor, duracao, youtube };
 			model.addRow(tabela);
 			
-			table = new JTable(model);
-			Container container = getContentPane();
-			container.add(new JScrollPane(table), BorderLayout.CENTER);
 		}
+		
+		table = new JTable(model);
+		Container container = getContentPane();
+		container.add(new JScrollPane(table), BorderLayout.CENTER);
 
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setSize(400, 300);
