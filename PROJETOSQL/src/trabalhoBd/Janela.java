@@ -29,8 +29,6 @@ public class Janela extends JFrame implements ActionListener
 		setSize(1000, 400);
 		setLayout(null);
 		
-		
-		
 		labelComando = new JLabel("Comando SQL:");
 		labelComando.setBounds(30, 30, 150, 50);
 		labelComando.setVisible(true);

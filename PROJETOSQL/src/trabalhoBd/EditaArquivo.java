@@ -168,9 +168,9 @@ public class EditaArquivo {
 				
 				if ((posicaoYoutube + posicaoAlbum + posicaoCantor + posicaoDuracao + posicaoNome) == 10) 
 				{
-					while (sql.contains("  ")) 
+					while (sql.trim().contains("  ")) 
 					{
-						sql.replaceAll("  ", " ");
+						sql = sql.replaceAll("  ", " ");
 					}
 					
 					String[] insereDado = sql.split("\"");

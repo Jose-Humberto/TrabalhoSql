@@ -8,7 +8,7 @@ public class ProgramaBd
 //		
 //		tb.mostrarTabela();
 		
-		Janela janela = new Janela();
+//		Janela janela = new Janela();
 			
 	}
 	
